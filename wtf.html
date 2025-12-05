@@ -59,14 +59,14 @@
         .text-center { text-align: center; }
         .mb-20 { margin-bottom: 20px; }
         .mb-30 { margin-bottom: 30px; }
-        .mb-50 { margin-bottom: 50px; }
+        .mb-50 { margin-bottom: 60px; }
 
         .btn {
             display: inline-block;
             padding: 16px 32px;
             font-size: 1.1rem;
             font-weight: bold;
-            border-radius: 6px;
+            border-radius: 3px;
             text-decoration: none;
             transition: all 0.3s ease;
             border: none;
@@ -110,16 +110,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
+            gap: 20px; /* Добавляем отступы между блоками */
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
+            flex-shrink: 0;
         }
 
         .logo-text {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: var(--white);
         }
@@ -129,10 +132,18 @@
             color: #ccc;
         }
 
+        .main-nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
         .main-nav ul {
             display: flex;
             list-style: none;
             gap: 30px;
+            margin: 0;
+            padding: 0;
         }
 
         .main-nav a {
@@ -140,6 +151,7 @@
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
+            white-space: nowrap;
         }
 
         .main-nav a:hover {
@@ -150,6 +162,27 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            flex-shrink: 0;
+            margin-left: auto; /* Прижимаем к правому краю */
+        }
+
+        /* Стили для кнопки Войти */
+        .btn-secondary {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            white-space: nowrap; /* Не переносить текст */
+        }
+
+        .btn-secondary:hover {
+            background-color: #cc0000;
+            color: white;
         }
 
         .burger-menu {
@@ -160,7 +193,6 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-
         /* ===== Hero-секция ===== */
         .hero {
             background-color: var(--dark-blue);
@@ -616,7 +648,7 @@
             <div class="influence-viz">
                 <div>Интерактивная визуализация сетей влияния</div>
             </div>
-            <div class="text-center mt-50">
+            <div class="text-center mt-220">
                 <a href="#" class="btn btn-primary">Исследовать связи и влияния</a>
             </div>
         </div>
